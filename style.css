@@ -84,13 +84,29 @@ footer {
     cursor: default;
 }
 
+#contact {
+    animation: flashTest 1.2s ease-in infinite;
+}
+
+@keyframes flashTest {
+    0% {
+        color: #fff;
+    }
+    50% {
+        color: #727272;
+    }
+    100% {
+        color: #fff;
+    }
+}
+
 .animated-background {
     background: linear-gradient(135deg, #030303, #2e2e2e);
     background-size: 200% 200%;
     animation: gradientPulse 10s ease-in-out infinite;
-  }
+}
 
-  @keyframes gradientPulse {
+@keyframes gradientPulse {
     0% {
         background-position: 0% 50%;
     }
