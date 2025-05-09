@@ -6,6 +6,26 @@
   <title>FRAKTAL MUSIC</title>
 
   <link rel="stylesheet" href="style.css" />
+  <script>
+    let locale;
+    const userLocale = navigator.language || 'en';
+    if (!['en', 'es'].includes(userLocale.split('-')[0]))
+      locale = 'en';
+    else
+      locale = userLocale.split('-')[0];
+
+    const setLocaleStrings = ()  => {
+      const contact = document.getElementById('contact');
+      contact.innerText = locale === 'en' ?
+        "Contact us! 📨" :
+        '¡Contáctanos! 📨';
+      
+      const distrokid = document.getElementById('distrokid');
+      distrokid.innerText = locale === 'en' ?
+        "7% off DistroKid! 💰" :
+        '¡7% de descuento en DistroKid! 💰';
+    }
+  </script>
 </head>
 <body class="animated-background">
   <header>
@@ -44,7 +64,7 @@
         </a>
       </li>
       <li>
-        <a href="https://distrokid.com/vip/seven/1146741" target="_blank" rel="noopener noreferrer">
+        <a href="https://distrokid.com/vip/seven/1146741" target="_blank" rel="noopener noreferrer" id="distrokid">
           7% off DistroKid! 💰
         </a>
       </li>
@@ -55,4 +75,8 @@
     &#169; 2025 FRAKTAL MUSIC
   </footer>
 </body>
+
+<script defer>
+  setLocaleStrings();
+</script>
 </html>
