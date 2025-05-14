@@ -5,14 +5,6 @@
     font-size: 28px;
 }
 
-.title {
-    font-family: "Oswald", sans-serif;
-    font-weight: 600;
-    animation: fontCycle 2s infinite;
-    text-shadow: 5px 5px 5px #333333;
-    /* transition: font-family 1ms; */
-}
-
 html {
     background-color: #000;
 }
@@ -118,35 +110,14 @@ footer {
     }
 }
 
-@keyframes fontCycle {
-    0% {
-        font-family: 'Oswald', sans-serif;
-    }
-    20% {
-        font-family: monospace;
-    }
-    40% {
-        font-family: sans-serif;
-    }
-    60% {
-        font-family: cursive;
-    }
-    80% {
-        font-family: fantasy;
-    }
-    100% {
-        font-family: 'Oswald', sans-serif;
-    }
-}
-
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1023px) {
     li:hover {
         font-size: inherit !important;
     }
 
     main {
-        padding-left: 3rem !important;
-        padding-right: 3rem !important;
+        padding-left: 2.4rem !important;
+        padding-right: 2.4rem !important;
         font-size: 0.75rem;
     }
 }

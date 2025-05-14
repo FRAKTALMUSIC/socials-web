@@ -14,12 +14,12 @@
     else
       locale = userLocale.split('-')[0];
 
-    const setLocaleStrings = ()  => {
+    const setLocaleStrings = () => {
       const contact = document.getElementById('contact');
       contact.innerText = locale === 'en' ?
         "Contact us! 📨" :
         '¡Contáctanos! 📨';
-      
+
       const distrokid = document.getElementById('distrokid');
       distrokid.innerText = locale === 'en' ?
         "7% off DistroKid! 💰" :
@@ -34,9 +34,6 @@
     </a>
   </header>
   <main>
-    <!-- <h1 class="title" style="font-size: 1.6rem;">
-      Links
-    </h1> -->
     <ul>
       <li>
         <a href="mailto:contact@fraktalmusic.com" target="_blank" rel="noopener noreferrer" id="contact">
