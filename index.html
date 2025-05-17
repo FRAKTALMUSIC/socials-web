@@ -18,12 +18,24 @@
       const contact = document.getElementById('contact');
       contact.innerText = locale === 'en' ?
         "Contact us! 📨" :
-        '¡Contáctanos! 📨';
+        "¡Contáctanos! 📨";
 
       const distrokid = document.getElementById('distrokid');
       distrokid.innerText = locale === 'en' ?
         "7% off DistroKid! 💰" :
-        '¡7% de descuento en DistroKid! 💰';
+        "¡7% de descuento en DistroKid! 💰";
+
+      const info = document.getElementById('infoDesc');
+      info.innerHTML = locale === 'en' ?
+        "<strong>Fraktal Music</strong> is an independent recording studio located in Metepec, Mexico.<br/>We offer professional audio recording, mixing and mastering services.<br/>Contact us and book your session now!" :
+        "<strong>Fraktal Music</strong> es un estudio de grabación independiente ubicado en Metepec, México.<br/>Ofrecemos servicios de grabación, mezcla y masterización de audio de grado profesional.<br/>¡Contáctanos y agenda tu cita ahora!"
+    }
+
+    const toggleModal = () => {
+      const modal = document.getElementById('modal');
+      if (!modal) return;
+
+      modal.classList.toggle('invisible');
     }
   </script>
 </head>
@@ -71,6 +83,30 @@
   <footer>
     &#169; 2025 FRAKTAL MUSIC
   </footer>
+
+  <div class="info">
+    <button onclick="toggleModal()">
+      &#9432;
+    </button>
+  </div>
+  <div class="modal invisible" id="modal">
+    <header>
+      <button onclick="toggleModal()">
+        X
+      </button>
+    </header>
+    <div>
+      <p id="infoDesc">
+        <strong>
+          Fraktal Music
+        </strong> es un estudio de grabación independiente ubicado en Metepec, México.
+        <br/>
+        Ofrecemos servicios de grabación, mezcla y masterización de audio de grado profesional.
+        <br/>
+        ¡Contáctanos y agenda tu cita ahora!
+      </p>
+    </div>
+  </div>
 </body>
 
 <script defer>
